@@ -1,0 +1,22 @@
+{
+    "job1": {
+        "depends": [],
+        "cmd": "./p.sh 2 7"
+    },
+    "jobX": {
+        "depends": [],
+        "cmd": "./p.sh 3"
+    },
+    "job2": {
+        "depends": ["jobX"],
+        "cmd": "./p.sh 4"
+    },
+    "job3": {
+        "depends": ["job1", "job2"],
+        "cmd": "./p.sh"
+    },
+    "job4": {
+        "depends": ["job1"],
+        "cmd": "./p.sh 1"
+    }
+}
